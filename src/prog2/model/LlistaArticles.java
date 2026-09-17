@@ -19,12 +19,14 @@ public class LlistaArticles extends Llista<Article> implements Serializable {
     }
             
     public boolean contains(String articleId) {
+
         for(Iterator iter = this.llista.iterator(); iter.hasNext();) {
             Article a = (Article) iter.next();
             if(a.getId().equals(articleId)){
                return true;
             }
-        }       
+        }
         return false;
+
     }
 }
